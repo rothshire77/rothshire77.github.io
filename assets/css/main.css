@@ -80,17 +80,11 @@ h6 {
   font-family: var(--heading-font);
 }
 
-
-/* css for video */
-
-/* Video for - Mobile */
-
-/* Media query for mobile screens */
-@media (max-width: 1069px) {
-  .about {
-      padding: 20px; /* Reduced padding for mobile screens */
-      margin-top: 200px; /* Adjust if necessary */
-  }
+.video-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Sets the video section to full viewport height */
+  overflow: hidden;
 }
 
 .video-background {
@@ -100,71 +94,57 @@ h6 {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: 0; /* Ensure it stays behind the text */
 }
 
 video {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%; /* Stretch to fill width */
-  height: auto; /* Maintain aspect ratio */
-  min-height: 100%; /* Ensure it covers the height */
+  width: 100%;
+  height: auto;
+  min-height: 100%;
   transform: translate(-50%, -50%);
-  object-fit: contain; /* Fit without cropping */
+  object-fit: cover; /* Fit the video to cover entire area */
 }
-
 
 .contentforvideo {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
   z-index: 1;
   color: white;
-  padding: 50% 0% 0% 0%;
-  height: 80%; 
+  text-align: left;
+  width: 90%; /* Keeps text centered and within view */
 }
 
-/* Animated text */
+.animated-text-container {
+  font-size: 3vw; /* Make text size responsive */
+  max-width: 800px; /* Limit max width for larger screens */
+
+  line-height: 1.2; /* Adjust line height for readability */
+}
+
 .animated-text {
-  position: absolute;
-  left: 5%; /* Align text to the left */
-  top: 60%; /* Start from the vertical center */
-  transform: translateY(-50%); /* Center the text vertically */
-  font-size: 3rem; /* Make text larger */
-  opacity: 0; /* Start invisible */
-  animation: fadeInFromLeft 3s forwards; /* Change duration as needed */
-  font-weight:1000;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2.5rem; /* Fallback for larger screens */
+  font-weight: 1000;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  animation: fadeInFromLeft 3s forwards;
 }
 
-
-@media (max-width: 1069px) {
-  .animated-text {
-    position: absolute;
-    left: 5%; /* Align text to the left */
-    top: 130%; /* Start from the vertical center */
-    transform: translateY(-50%); /* Center the text vertically */
-    font-size: 2rem; /* Make text larger */
-    opacity: 0; /* Start invisible */
-    animation: fadeInFromLeft 3s forwards; /* Change duration as needed */
-    font-weight:500;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+@media (max-width: 768px) {
+  .animated-text-container {
+    font-size: 5vw; /* Scale font size for smaller screens */
+    line-height: 1.3;
   }
 }
 
-
-@keyframes fadeInFromLeft {
-  0% {
-      transform: translate(-50%, -50%); /* Start off-center to the left */
-      opacity: 0; /* Fully transparent */
+@media (max-width: 480px) {
+  .animated-text-container {
+    font-size: 6vw;
+    line-height: 1.3;
   }
-  100% {
-      transform: translateY(-50%); /* Stay vertically centered */
-      opacity: 1; /* Fully visible */
-  }
-}
-
-/* Delayed animation for the second line */
-.animated-text:nth-of-type(2) {
-  animation-delay: 0.5s; /* Delay for the second line */
 }
 
 
@@ -243,6 +223,7 @@ video {
 .header .logo img {
   max-height: 120px;  /* logo size */
 }
+
 
 .header .logo h1 {
   font-size: 30px;
@@ -408,6 +389,10 @@ video {
   }
 }
 
+.navmenu p{
+font-size: 22px;
+}
+
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
@@ -424,6 +409,10 @@ video {
     z-index: 9997;
     
   }
+ 
+  .navmenu p{
+    font-size: 22px;
+    }
 
   .navmenu ul {
     display: none;
@@ -811,22 +800,21 @@ video {
 }
 
 /*--------------------------------------------------------------
-# Global Sections
+# Global Sections padding top 
 --------------------------------------------------------------*/
 section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 6em 0 0 0;
   scroll-margin-top: 90px;
   overflow: clip;
 }
 
-@media (max-width: 1199px) {
-
-  section,
+/*for small screen*/
+@media (max-width: 768px) {
   .section {
-    scroll-margin-top: 66px;
+    padding: 5em 0 0 0;
   }
 }
 
@@ -1038,6 +1026,9 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about {
+  margin-top: 2em; /* Add spacing to ensure it sits below the video */
+}
 
 .about .about-content h3 {
   font-weight: 700;
@@ -1048,7 +1039,7 @@ section,
 .about .about-content h5,h4 {
   font-size: 22px;
   text-align: justify;
-  padding-top: 2%;
+  
 }
 
 .about .about-content ul {
@@ -1624,10 +1615,11 @@ section,
 --------------------------------------------------------------*/
 /* contact us section*/
 .contact-image h3{
-  font-weight: 300;
+  font-weight: 600;
   font-size: 22px;
   padding: 2% 8% 2% 8%;
-  line-height: 2em;
+  text-align: justify;
+
 }
 
 .contact-image {
@@ -2155,3 +2147,132 @@ transition: all 600ms ease !important;
 }
 
 
+/*--------------------------------------------------------------
+# Team Section
+--------------------------------------------------------------*/
+.team .team-member {
+  background-color: var(--surface-color);
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.team .team-member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.team .team-member .social {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  text-align: center;
+}
+
+.team .team-member .social a {
+  background: color-mix(in srgb, var(--contrast-color), transparent 25%);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 0 3px;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  transition: ease-in-out 0.3s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team .team-member .social a:hover {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+}
+
+.team .team-member .social i {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.team .team-member .member-info {
+  padding: 25px 15px;
+  
+}
+
+.team .team-member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.team .team-member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.team .team-member:hover .social {
+  opacity: 1;
+  bottom: 15px;
+}
+/*--------------------------------------------------------------
+# Recent Posts Section
+--------------------------------------------------------------*/
+.recent-posts article {
+  background: var(--surface-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.recent-posts .post-img {
+  max-height: 240px;
+  margin: -30px -30px 15px -30px;
+  overflow: hidden;
+}
+
+.recent-posts .post-category {
+  font-size: 16px;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin-bottom: 10px;
+}
+
+.recent-posts .title {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.recent-posts .title a {
+  color: var(--heading-color);
+  transition: 0.3s;
+}
+
+.recent-posts .title a:hover {
+  color: var(--accent-color);
+}
+
+.recent-posts .post-author-img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.recent-posts .post-author {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.recent-posts .post-date {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin-bottom: 0;
+}
