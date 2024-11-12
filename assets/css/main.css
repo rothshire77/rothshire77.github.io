@@ -250,6 +250,18 @@ video {
 }
 
 @media (max-width: 1200px) {
+
+  .header {
+    --background-color:#ffffff;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    color: var(--default-color);
+    background-color: var(--background-color);
+    padding: 15px 10px 10px 10px; /* Top right bottom left */
+    transition: all 0.5s;
+    z-index: 997;
+  }
+
   .header .logo {
     order: 1;
   }
@@ -262,6 +274,9 @@ video {
 
   .header .navmenu {
     order: 3;
+  }
+  .header .logo img {
+    max-height: 100px;  /* logo size */
   }
 }
 
@@ -405,7 +420,7 @@ font-size: 22px;
   }
 
   .navmenu {
-    padding: 0;
+    padding: 0 0 0 0;
     z-index: 9997;
     
   }
