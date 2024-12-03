@@ -4,30 +4,43 @@ height: 80%;
 Ensure it takes the full height 
 */
 /* Fonts */
+
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #555555; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #555555; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #949193; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #555555;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #555555;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #949193;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #000000;  /* The default color of the main navmenu links */
-  --nav-hover-color: #998992; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #000000; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #000000; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #998992; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #000000;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #998992;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #000000;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #000000;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #998992;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -83,7 +96,8 @@ h6 {
 .video-section {
   position: relative;
   width: 100%;
-  min-height: 100vh; /* Sets the video section to full viewport height */
+  min-height: 100vh;
+  /* Sets the video section to full viewport height */
   overflow: hidden;
 }
 
@@ -94,7 +108,8 @@ h6 {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 0; /* Ensure it stays behind the text */
+  z-index: 0;
+  /* Ensure it stays behind the text */
 }
 
 video {
@@ -105,7 +120,8 @@ video {
   height: auto;
   min-height: 100%;
   transform: translate(-50%, -50%);
-  object-fit: cover; /* Fit the video to cover entire area */
+  object-fit: cover;
+  /* Fit the video to cover entire area */
 }
 
 .contentforvideo {
@@ -116,18 +132,22 @@ video {
   z-index: 1;
   color: white;
   text-align: left;
-  width: 90%; /* Keeps text centered and within view */
+  width: 90%;
+  /* Keeps text centered and within view */
 }
 
 .animated-text-container {
-  font-size: 3vw; /* Make text size responsive */
-  max-width: 800px; /* Limit max width for larger screens */
-
-  line-height: 1.2; /* Adjust line height for readability */
+  font-size: 3vw;
+  /* Make text size responsive */
+  max-width: 800px;
+  /* Limit max width for larger screens */
+  line-height: 1.2;
+  /* Adjust line height for readability */
 }
 
 .animated-text {
-  font-size: 2.5rem; /* Fallback for larger screens */
+  font-size: 2.5rem;
+  /* Fallback for larger screens */
   font-weight: 1000;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   animation: fadeInFromLeft 3s forwards;
@@ -135,7 +155,8 @@ video {
 
 @media (max-width: 768px) {
   .animated-text-container {
-    font-size: 5vw; /* Scale font size for smaller screens */
+    font-size: 5vw;
+    /* Scale font size for smaller screens */
     line-height: 1.3;
   }
 }
@@ -206,12 +227,13 @@ video {
 #change Navbar padding and Margin here to move image logo and margin
 --------------------------------------------------------------*/
 .header {
-  --background-color:#ffffff;
+  --background-color: #ffffff;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 15px 60px 10px 60px; /* Top right bottom left */
+  padding: 15px 60px 10px 60px;
+  /* Top right bottom left */
   transition: all 0.5s;
   z-index: 997;
 }
@@ -221,7 +243,8 @@ video {
 }
 
 .header .logo img {
-  max-height: 120px;  /* logo size */
+  max-height: 120px;
+  /* logo size */
 }
 
 
@@ -252,12 +275,13 @@ video {
 @media (max-width: 1200px) {
 
   .header {
-    --background-color:#ffffff;
+    --background-color: #ffffff;
     --default-color: #ffffff;
     --heading-color: #ffffff;
     color: var(--default-color);
     background-color: var(--background-color);
-    padding: 15px 10px 10px 10px; /* Top right bottom left */
+    padding: 15px 10px 10px 10px;
+    /* Top right bottom left */
     transition: all 0.5s;
     z-index: 997;
   }
@@ -275,8 +299,10 @@ video {
   .header .navmenu {
     order: 3;
   }
+
   .header .logo img {
-    max-height: 100px;  /* logo size */
+    max-height: 100px;
+    /* logo size */
   }
 }
 
@@ -301,10 +327,10 @@ video {
 
   .navmenu ul {
     margin-right: 50% !important;
-    padding-right: 30% !important;
+    padding-right: 32% !important;
     display: flex;
     list-style: none;
-    align-items:flex-start;
+    align-items: flex-start;
     font-size: 26px;
   }
 
@@ -337,7 +363,7 @@ video {
 
   .navmenu li:last-child a {
     padding-right: 0;
-    
+
   }
 
   .navmenu li:hover>a,
@@ -350,7 +376,7 @@ video {
     margin: 0;
     padding: 10px 0;
     background: var(--background-color);
-    display:initial;
+    display: initial;
     position: absolute;
     visibility: hidden;
     left: 14px;
@@ -363,7 +389,7 @@ video {
   }
 
   .navmenu .dropdown ul li {
-    min-width: 200px;
+    max-width: 220px;
   }
 
   .navmenu .dropdown ul a {
@@ -373,7 +399,7 @@ video {
     color: var(--nav-dropdown-color);
   }
 
-  .navmenu .dropdown ul a  {
+  .navmenu .dropdown ul a {
     font-size: 18px;
   }
 
@@ -399,13 +425,14 @@ video {
   .navmenu .dropdown .dropdown:hover>ul {
     opacity: 1;
     top: 0;
-    left: -140%; /* change this value to move list padding on hover*/
+    left: -140%;
+    /* change this value to move list padding on hover*/
     visibility: visible;
   }
 }
 
-.navmenu p{
-font-size: 22px;
+.navmenu p {
+  font-size: 22px;
 }
 
 /* Navmenu - Mobile */
@@ -422,12 +449,12 @@ font-size: 22px;
   .navmenu {
     padding: 0 0 0 0;
     z-index: 9997;
-    
+
   }
- 
-  .navmenu p{
+
+  .navmenu p {
     font-size: 22px;
-    }
+  }
 
   .navmenu ul {
     display: none;
@@ -451,7 +478,7 @@ font-size: 22px;
     color: var(--nav-dropdown-color);
     padding: 10px 20px;
     font-family: var(--nav-font);
-    font-size: 18px ;
+    font-size: 18px;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -842,6 +869,7 @@ section,
   position: relative;
 }
 
+/*font-size for all section using h2*/
 .section-title h2 {
   font-size: 32px;
   font-weight: 700;
@@ -863,8 +891,11 @@ section,
   margin: auto;
 }
 
-.section-title p {
-  margin-bottom: 0;
+.section p {
+  font-size: 16px;
+  font-weight: 300;
+  animation: fadeInDown 1s both 0.2s;
+
 }
 
 /*--------------------------------------------------------------
@@ -931,7 +962,7 @@ section,
 /*Heading section */
 .hero h2 {
   margin-bottom: 30px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 44px;
   font-weight: 700;
   animation: fadeInDown 1s both;
@@ -1042,7 +1073,8 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about {
-  margin-top: 2em; /* Add spacing to ensure it sits below the video */
+  margin-top: 2em;
+  /* Add spacing to ensure it sits below the video */
 }
 
 .about .about-content h3 {
@@ -1051,10 +1083,11 @@ section,
   padding-top: 5%;
 }
 
-.about .about-content h5,h4 {
+.about .about-content h5,
+h4 {
   font-size: 22px;
   text-align: justify;
-  
+
 }
 
 .about .about-content ul {
@@ -1087,15 +1120,7 @@ section,
   border-radius: 5px;
 }
 
-.about .about-content ul h4 {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.about .about-content ul p {
-  font-size: 15px;
-}
-
+/* about content paragraph p font-size */
 .about .about-content p {
   font-size: 16px;
   font-weight: 300;
@@ -1292,7 +1317,7 @@ section,
 }
 
 .why-us .card-item p {
-  font-size: 15px;
+  font-size: 16px;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   margin: 0;
   padding: 0;
@@ -1628,24 +1653,25 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-/* contact us section*/
-.contact-image h3{
-  font-weight: 600;
-  font-size: 22px;
+/* text design for explore and contact page*/
+.textDesign h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
   padding: 2% 8% 2% 8%;
   text-align: justify;
-
+  animation: fadeInDown 1s both 0.2s;
 }
 
-.contact-image {
-  width: 100%;
-  overflow: hidden;
+@media (max-width: 768px) {
+  .textDesign h3 {
+    font-weight: 300;
+    font-size: 16px;
+    padding: 2% 8% 2% 8%;
+    text-align: justify;
+    animation: fadeInDown 1s both 0.2s;
+  }
 }
 
-.contact-image img {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
-}
 
 
 .contact .info-item {
@@ -1894,20 +1920,20 @@ section,
 # Button section
 --------------------------------------------------------------*/
 
-.button-primary-orange-black{
-background: 0;
-border: 2px solid #ed6631;
-border-radius: 100px;
-color: #000;
-cursor: pointer;
-padding: 16px 24px;
-text-decoration: none;
-text-transform: uppercase;
--webkit-transition: all 600ms ease !important;
-transition: all 600ms ease !important;
+.button-primary-orange-black {
+  background: 0;
+  border: 2px solid #ed6631;
+  border-radius: 100px;
+  color: #000;
+  cursor: pointer;
+  padding: 16px 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 600ms ease !important;
+  transition: all 600ms ease !important;
 }
 
-.button-primary{
+.button-primary {
   font-family: "Roboto";
   font-size: 14px;
   font-weight: bold;
@@ -2056,61 +2082,23 @@ transition: all 600ms ease !important;
 # Starter Section Section
 --------------------------------------------------------------*/
 
-/*Contact us section*/
-.image-background {
-  background-image: url("../../assets/img/contactus.jpg"); /* Replace with your image path */
-  background-size: cover;
-  background-position: center;
-  height: 85vh;
-  position: relative;
-  padding-top: 22%;
-}
-
-@media (max-width: 1069px) {
-  .image-background {
-      padding: 25%; /* Reduced padding for mobile screens */
-      margin-top: 200px; /* Adjust if necessary */
+/*image design for explore career and contact us page */
+@media (max-width: 768px) {
+  .image-below-navbar img {
+    width: 100%;
+    margin-top: 100px;
   }
 }
 
-/*Explore us section*/
-.explore-background {
-  background-image: url("../../assets/img/rothshire_explore.jpg"); /* Replace with your image path */
-  background-size: cover;
-  background-position: center;
-  height: 85vh;
-  position: relative;
-  padding-top: 22%;
-}
-
-@media (max-width: 1069px) {
-  .explore-background {
-      padding: 25%; /* Reduced padding for mobile screens */
-      margin-top: 200px; /* Adjust if necessary */
+/*image design for explore career and contact us page for small screen */
+@media (min-width: 768px) {
+  .image-below-navbar img {
+    width: 100%;
   }
 }
 
-
-
-/*Join the team section*/
-.image-background-joinourteam {
-  background-image: url("../../assets/img/join-our-team.jpeg"); /* Replace with your image path */
-  background-size: cover;
-  background-position: center;
-  height: 80vh;
-  position: relative;
-  padding-top: 22%;
-}
-
-@media (max-width: 1069px) {
-  .image-background-joinourteam {
-      padding: 25%; /* Reduced padding for mobile screens */
-      margin-top: 200px; /* Adjust if necessary */
-  }
-}
-
-/*Join the team text design*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -2120,7 +2108,9 @@ transition: all 600ms ease !important;
 .waviy {
   align-items: center;
   font-size: 38px;
+  padding: 0% 0% 5% 15%;
 }
+
 .waviy span {
   font-family: 'Alfa Slab One';
   position: relative;
@@ -2130,37 +2120,22 @@ transition: all 600ms ease !important;
   text-transform: uppercase;
   animation: waviy 1s infinite;
   animation-delay: calc(.1s * var(--i));
-  text-align: center; 
+  text-align: center;
   padding-left: 1%;
 }
+
 @keyframes waviy {
-  0%,40%,100% {
+
+  0%,
+  40%,
+  100% {
     transform: translateY(0)
   }
+
   20% {
     transform: translateY(-10px)
   }
 }
-
-
-
-  /*About Us section*/
-.image-background-joinourteam {
-  background-image: url("../../assets/img/join-our-team.jpeg"); /* Replace with your image path */
-  background-size: cover;
-  background-position: center;
-  height: 80vh;
-  position: relative;
-  padding-top: 22%;
-}
-
-@media (max-width: 1069px) {
-  .image-background-joinourteam {
-      padding: 25%; /* Reduced padding for mobile screens */
-      margin-top: 200px; /* Adjust if necessary */
-  }
-}
-
 
 /*--------------------------------------------------------------
 # Team Section
@@ -2213,7 +2188,7 @@ transition: all 600ms ease !important;
 
 .team .team-member .member-info {
   padding: 25px 15px;
-  
+
 }
 
 .team .team-member .member-info h4 {
@@ -2235,6 +2210,7 @@ transition: all 600ms ease !important;
   opacity: 1;
   bottom: 15px;
 }
+
 /*--------------------------------------------------------------
 # Recent Posts Section
 --------------------------------------------------------------*/
@@ -2290,4 +2266,361 @@ transition: all 600ms ease !important;
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   margin-bottom: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Blog Posts Section
+--------------------------------------------------------------*/
+.blog-posts article {
+  background-color: var(--surface-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.blog-posts .post-img {
+  max-height: 240px;
+  margin: -30px -30px 15px -30px;
+  overflow: hidden;
+}
+
+.blog-posts .post-category {
+  font-size: 16px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin-bottom: 10px;
+}
+
+.blog-posts .title {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.blog-posts .title a {
+  color: var(--heading-color);
+  transition: 0.3s;
+}
+
+.blog-posts .title a:hover {
+  color: var(--accent-color);
+}
+
+.blog-posts .post-author-img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.blog-posts .post-author {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.blog-posts .post-date {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Blog Pagination Section
+--------------------------------------------------------------*/
+.blog-pagination {
+  padding-top: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.blog-pagination ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.blog-pagination li {
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.blog-pagination li a {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  padding: 7px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-pagination li a.active,
+.blog-pagination li a:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.blog-pagination li a.active a,
+.blog-pagination li a:hover a {
+  color: var(--contrast-color);
+}
+
+/*--------------------------------------------------------------
+# Blog Details Section
+--------------------------------------------------------------*/
+.blog-details {
+  padding-bottom: 30px;
+}
+
+.blog-details .article {
+  background-color: var(--surface-color);
+  padding: 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.blog-details .post-img {
+  margin: -30px -30px 20px -30px;
+  overflow: hidden;
+}
+
+.blog-details .title {
+  color: var(--heading-color);
+  font-size: 28px;
+  font-weight: 700;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.blog-details .content {
+  margin-top: 20px;
+}
+
+.blog-details .content h3 {
+  font-size: 22px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.blog-details .content blockquote {
+  overflow: hidden;
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  padding: 60px;
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.blog-details .content blockquote p {
+  color: var(--default-color);
+  line-height: 1.6;
+  margin-bottom: 0;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.blog-details .content blockquote:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--accent-color);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.blog-details .meta-top {
+  margin-top: 20px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.blog-details .meta-top ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-details .meta-top ul li+li {
+  padding-left: 20px;
+}
+
+.blog-details .meta-top i {
+  font-size: 16px;
+  margin-right: 8px;
+  line-height: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.blog-details .meta-top a {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-size: 14px;
+  display: inline-block;
+  line-height: 1;
+}
+
+.blog-details .meta-bottom {
+  padding-top: 10px;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.blog-details .meta-bottom i {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  display: inline;
+}
+
+.blog-details .meta-bottom a {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  transition: 0.3s;
+}
+
+.blog-details .meta-bottom a:hover {
+  color: var(--accent-color);
+}
+
+.blog-details .meta-bottom .cats {
+  list-style: none;
+  display: inline;
+  padding: 0 20px 0 0;
+  font-size: 14px;
+}
+
+.blog-details .meta-bottom .cats li {
+  display: inline-block;
+}
+
+.blog-details .meta-bottom .tags {
+  list-style: none;
+  display: inline;
+  padding: 0;
+  font-size: 14px;
+}
+
+.blog-details .meta-bottom .tags li {
+  display: inline-block;
+}
+
+.blog-details .meta-bottom .tags li+li::before {
+  padding-right: 6px;
+  color: var(--default-color);
+  content: ",";
+}
+
+.blog-details .meta-bottom .share {
+  font-size: 16px;
+}
+
+.blog-details .meta-bottom .share i {
+  padding-left: 5px;
+}
+
+/*--------------------------------------------------------------
+# Blog Author Section
+--------------------------------------------------------------*/
+.blog-author {
+  padding: 10px 0 40px 0;
+}
+
+.blog-author .author-container {
+  background-color: var(--surface-color);
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.blog-author img {
+  max-width: 120px;
+  margin-right: 20px;
+}
+
+.blog-author h4 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 0px;
+  padding: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.blog-author .social-links {
+  margin: 0 10px 10px 0;
+}
+
+.blog-author .social-links a {
+  color: color-mix(in srgb, var(--default-color), transparent 60%);
+  margin-right: 5px;
+}
+
+.blog-author p {
+  font-style: italic;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Starter Section Section
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widgets-container {
+  background-color: var(--surface-color);
+  padding: 30px;
+  margin: 60px 0 30px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.widget-item {
+  margin-bottom: 40px;
+}
+
+.widget-title {
+  color: var(--heading-color);
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.widget-item:last-child {
+  margin-bottom: 0;
+}
+
+.recent-posts-widget .post-item {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.recent-posts-widget .post-item:last-child {
+  margin-bottom: 0;
+}
+
+.recent-posts-widget .post-item img {
+  width: 80px;
+  margin-right: 15px;
+}
+
+.recent-posts-widget .post-item h4 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.recent-posts-widget .post-item h4 a {
+  color: var(--default-color);
+  transition: 0.3s;
+}
+
+.recent-posts-widget .post-item h4 a:hover {
+  color: var(--accent-color);
+}
+
+.recent-posts-widget .post-item time {
+  display: block;
+  font-style: italic;
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
